@@ -71,7 +71,7 @@ var payload = {
 	"EditorId": TestUserAccountID
 };
 ```
-* InternalListNameHere is the internal list name of the list being worked with. A quick GET to `/_api/Web/lists/getByTitle('List Name Here')` should reveal it. For example, if the list was called "Responses", the internal name might be "Responses as well, so the metadata type property becomes _SP.Data.ResponsesListItem_. "Survey Responses" might become _SP.Data.Survey_x0020_ResListItem_ depending on how much of the name is cut off and treated internally. It has been noted that there may be issues if the very first letter of the internal list name is not capitalized when setting the _SP.Data. ... ListItem_ property.
+* InternalListNameHere is the internal list name of the list being worked with. A quick GET to `/_api/Web/lists/getByTitle('List Name Here')` should reveal it. For example, if the list was called "Responses", the internal name might be "Responses" as well, so the metadata type property becomes _SP.Data.ResponsesListItem_. "Survey Responses" might become _SP.Data.Survey_x0020_ResListItem_ depending on how much of the name is cut off and treated internally. It has been noted that there may be issues if the very first letter of the internal list name is not capitalized when setting the _SP.Data. ... ListItem_ property.
 * TestUserAccountID is the ID of the account that can be seen making all the anonymous responses in this case. You could briefly make an item under that particular account in a list and call on `/_api/web/lists/getByTitle('List Name Here')/items` to find that item, and expand its properties to reveal the _Created By_ property which would give the ID.
 
 
